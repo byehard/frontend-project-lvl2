@@ -1,8 +1,9 @@
 import _ from 'lodash';
+import parse from './parsers.js';
 
-const genDiff = (data1, data2) => {
-  const obj1 = JSON.parse(data1);
-  const obj2 = JSON.parse(data2);
+const genDiff = (absolutePath1, absolutePath2) => {
+  const obj1 = parse(absolutePath1);
+  const obj2 = parse(absolutePath2);
   const keys1 = _.keys(obj1);
   const keys2 = _.keys(obj2);
   const keys = _.union(keys1, keys2);

@@ -7,7 +7,7 @@
   },
   "main": "bin/gendiff.js",
   "scripts": {
-    "test": "npx jest"
+    "test": "npx -n '--experimental-vm-modules --no-warnings' jest"
   },
   "repository": {
     "type": "git",
@@ -26,10 +26,10 @@
   "homepage": "https://github.com/byehard/frontend-project-lvl2#readme",
   "dependencies": {
     "commander": "^7.2.0",
+    "js-yaml": "^3.14.1",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.13.8",
     "eslint": "^7.23.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
